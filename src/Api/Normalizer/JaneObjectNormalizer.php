@@ -718,6 +718,12 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             
             \ShipStream\Ups\Api\Model\FRSPaymentInformationAddress::class => \ShipStream\Ups\Api\Normalizer\FRSPaymentInformationAddressNormalizer::class,
             
+            \ShipStream\Ups\Api\Model\ShipmentWorldEase::class => \ShipStream\Ups\Api\Normalizer\ShipmentWorldEaseNormalizer::class,
+
+            \ShipStream\Ups\Api\Model\ShipmentWorldEasePortOfEntry::class => \ShipStream\Ups\Api\Normalizer\ShipmentWorldEasePortOfEntryNormalizer::class,
+
+            \ShipStream\Ups\Api\Model\ShipmentWorldEasePortOfEntryAddress::class => \ShipStream\Ups\Api\Normalizer\ShipmentWorldEasePortOfEntryAddressNormalizer::class,
+
             \ShipStream\Ups\Api\Model\ShipmentFreightShipmentInformation::class => \ShipStream\Ups\Api\Normalizer\ShipmentFreightShipmentInformationNormalizer::class,
             
             \ShipStream\Ups\Api\Model\FreightShipmentInformationFreightDensityInfo::class => \ShipStream\Ups\Api\Normalizer\FreightShipmentInformationFreightDensityInfoNormalizer::class,
@@ -2099,6 +2105,9 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 \ShipStream\Ups\Api\Model\RateShipmentFRSPaymentInformation::class => false,
                 \ShipStream\Ups\Api\Model\FRSPaymentInformationType::class => false,
                 \ShipStream\Ups\Api\Model\FRSPaymentInformationAddress::class => false,
+                \ShipStream\Ups\Api\Model\ShipmentWorldEase::class => false,
+                \ShipStream\Ups\Api\Model\ShipmentWorldEasePortOfEntry::class => false,
+                \ShipStream\Ups\Api\Model\ShipmentWorldEasePortOfEntryAddress::class => false,
                 \ShipStream\Ups\Api\Model\ShipmentFreightShipmentInformation::class => false,
                 \ShipStream\Ups\Api\Model\FreightShipmentInformationFreightDensityInfo::class => false,
                 \ShipStream\Ups\Api\Model\FreightDensityInfoAdjustedHeight::class => false,
@@ -3306,6 +3315,12 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             \ShipStream\Ups\Api\Model\FRSPaymentInformationType::class => \ShipStream\Ups\Api\Normalizer\FRSPaymentInformationTypeNormalizer::class,
             
             \ShipStream\Ups\Api\Model\FRSPaymentInformationAddress::class => \ShipStream\Ups\Api\Normalizer\FRSPaymentInformationAddressNormalizer::class,
+
+            \ShipStream\Ups\Api\Model\ShipmentWorldEase::class => \ShipStream\Ups\Api\Normalizer\ShipmentWorldEaseNormalizer::class,
+
+            \ShipStream\Ups\Api\Model\ShipmentWorldEasePortOfEntry::class => \ShipStream\Ups\Api\Normalizer\ShipmentWorldEasePortOfEntryNormalizer::class,
+
+            \ShipStream\Ups\Api\Model\ShipmentWorldEasePortOfEntryAddress::class => \ShipStream\Ups\Api\Normalizer\ShipmentWorldEasePortOfEntryAddressNormalizer::class,
             
             \ShipStream\Ups\Api\Model\ShipmentFreightShipmentInformation::class => \ShipStream\Ups\Api\Normalizer\ShipmentFreightShipmentInformationNormalizer::class,
             
@@ -4694,6 +4709,9 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 \ShipStream\Ups\Api\Model\RateShipmentFRSPaymentInformation::class => false,
                 \ShipStream\Ups\Api\Model\FRSPaymentInformationType::class => false,
                 \ShipStream\Ups\Api\Model\FRSPaymentInformationAddress::class => false,
+                \ShipStream\Ups\Api\Model\ShipmentWorldEase::class => false,
+                \ShipStream\Ups\Api\Model\ShipmentWorldEasePortOfEntry::class => false,
+                \ShipStream\Ups\Api\Model\ShipmentWorldEasePortOfEntryAddress::class => false,
                 \ShipStream\Ups\Api\Model\ShipmentFreightShipmentInformation::class => false,
                 \ShipStream\Ups\Api\Model\FreightShipmentInformationFreightDensityInfo::class => false,
                 \ShipStream\Ups\Api\Model\FreightDensityInfoAdjustedHeight::class => false,

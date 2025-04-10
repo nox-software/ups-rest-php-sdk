@@ -80,6 +80,12 @@ class ShipmentRequestShipment extends \ArrayObject
      */
     protected $fRSPaymentInformation;
     /**
+     * WorldEase is a contract service offering in the UPS shipping that decreases brokerage fees by consolidating loose packages into one shipment for customs clearance.
+     *
+     * @var ShipmentWorldEase
+     */
+    protected $worldEase;
+    /**
      * Container to hold Freight Shipment information.
      *
      * @var ShipmentFreightShipmentInformation
@@ -522,6 +528,28 @@ class ShipmentRequestShipment extends \ArrayObject
     {
         $this->initialized['fRSPaymentInformation'] = true;
         $this->fRSPaymentInformation = $fRSPaymentInformation;
+        return $this;
+    }
+    /**
+     * WorldEase is a contract service offering in the UPS shipping that decreases brokerage fees by consolidating loose packages into one shipment for customs clearance.
+     *
+     * @return ShipmentWorldEase
+     */
+    public function getWorldEase(): ShipmentWorldEase
+    {
+        return $this->worldEase;
+    }
+    /**
+     * WorldEase is a contract service offering in the UPS shipping that decreases brokerage fees by consolidating loose packages into one shipment for customs clearance.
+     *
+     * @param ShipmentWorldEase $worldEase
+     *
+     * @return self
+     */
+    public function setWorldEase(ShipmentWorldEase $worldEase): self
+    {
+        $this->initialized['worldEase'] = true;
+        $this->worldEase = $worldEase;
         return $this;
     }
     /**

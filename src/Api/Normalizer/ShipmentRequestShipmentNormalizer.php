@@ -76,6 +76,10 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setFRSPaymentInformation($this->denormalizer->denormalize($data['FRSPaymentInformation'], \ShipStream\Ups\Api\Model\ShipmentFRSPaymentInformation::class, 'json', $context));
                 unset($data['FRSPaymentInformation']);
             }
+            if (\array_key_exists('WorldEase', $data)) {
+                $object->setWorldEase($this->denormalizer->denormalize($data['WorldEase'], \ShipStream\Ups\Api\Model\ShipmentWorldEase::class, 'json', $context));
+                unset($data['WorldEase']);
+            }
             if (\array_key_exists('FreightShipmentInformation', $data)) {
                 $object->setFreightShipmentInformation($this->denormalizer->denormalize($data['FreightShipmentInformation'], \ShipStream\Ups\Api\Model\ShipmentFreightShipmentInformation::class, 'json', $context));
                 unset($data['FreightShipmentInformation']);
@@ -240,6 +244,9 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             }
             if ($object->isInitialized('fRSPaymentInformation') && null !== $object->getFRSPaymentInformation()) {
                 $data['FRSPaymentInformation'] = $this->normalizer->normalize($object->getFRSPaymentInformation(), 'json', $context);
+            }
+            if ($object->isInitialized('worldEase') && null !== $object->getWorldEase()) {
+                $data['WorldEase'] = $this->normalizer->normalize($object->getWorldEase(), 'json', $context);
             }
             if ($object->isInitialized('freightShipmentInformation') && null !== $object->getFreightShipmentInformation()) {
                 $data['FreightShipmentInformation'] = $this->normalizer->normalize($object->getFreightShipmentInformation(), 'json', $context);
@@ -417,6 +424,10 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 $object->setFRSPaymentInformation($this->denormalizer->denormalize($data['FRSPaymentInformation'], \ShipStream\Ups\Api\Model\ShipmentFRSPaymentInformation::class, 'json', $context));
                 unset($data['FRSPaymentInformation']);
             }
+            if (\array_key_exists('WorldEase', $data)) {
+                $object->setWorldEase($this->denormalizer->denormalize($data['WorldEase'], \ShipStream\Ups\Api\Model\ShipmentWorldEase::class, 'json', $context));
+                unset($data['WorldEase']);
+            }
             if (\array_key_exists('FreightShipmentInformation', $data)) {
                 $object->setFreightShipmentInformation($this->denormalizer->denormalize($data['FreightShipmentInformation'], \ShipStream\Ups\Api\Model\ShipmentFreightShipmentInformation::class, 'json', $context));
                 unset($data['FreightShipmentInformation']);
@@ -584,6 +595,9 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             }
             if ($object->isInitialized('fRSPaymentInformation') && null !== $object->getFRSPaymentInformation()) {
                 $data['FRSPaymentInformation'] = $this->normalizer->normalize($object->getFRSPaymentInformation(), 'json', $context);
+            }
+            if ($object->isInitialized('worldEase') && null !== $object->getWorldEase()) {
+                $data['WorldEase'] = $this->normalizer->normalize($object->getWorldEase(), 'json', $context);
             }
             if ($object->isInitialized('freightShipmentInformation') && null !== $object->getFreightShipmentInformation()) {
                 $data['FreightShipmentInformation'] = $this->normalizer->normalize($object->getFreightShipmentInformation(), 'json', $context);

@@ -172,6 +172,12 @@ class ShipmentResponseShipmentResults extends \ArrayObject
      */
     protected $roarRatedIndicator;
     /**
+     * Global Consolidation Carton Number
+     *
+     * @var string|null
+     */
+    protected $gccn;
+    /**
      * Disclaimer would be used to provide more information to shipper regarding the processed shipment. This would be used to notify shipper about possible taxes and duties that might have been added or might apply to the shipment. This field would be returned only if TaxInformationIndicator is present in a request.
      **NOTE:** For versions >= v2403, this element will always be returned as an array. For requests using versions < v2403, this element will be returned as an array if there is more than one object and a single object if there is only 1.
      *
@@ -707,6 +713,28 @@ class ShipmentResponseShipmentResults extends \ArrayObject
     {
         $this->initialized['roarRatedIndicator'] = true;
         $this->roarRatedIndicator = $roarRatedIndicator;
+        return $this;
+    }
+    /**
+     * Global Consolidation Carton Number
+     *
+     * @return string|null
+     */
+    public function getGccn(): ?string
+    {
+        return $this->gccn;
+    }
+    /**
+     * Global Consolidation Carton Number
+     *
+     * @param string|null $gccn
+     *
+     * @return self
+     */
+    public function setGccn(?string $gccn): self
+    {
+        $this->initialized['gccn'] = true;
+        $this->gccn = $gccn;
         return $this;
     }
 }
