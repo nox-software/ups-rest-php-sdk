@@ -201,6 +201,13 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             elseif (\array_key_exists('RoarRatedIndicator', $data) && $data['RoarRatedIndicator'] === null) {
                 $object->setRoarRatedIndicator(null);
             }
+            if (\array_key_exists('GCCN', $data) && $data['GCCN'] !== null) {
+                $object->setGccn($data['GCCN']);
+                unset($data['GCCN']);
+            }
+            elseif (\array_key_exists('GCCN', $data) && $data['GCCN'] === null) {
+                $object->setGccn(null);
+            }
             foreach ($data as $key => $value_4) {
                 if (preg_match('/.*/', (string) $key)) {
                     $object[$key] = $value_4;
@@ -290,6 +297,9 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             }
             if ($object->isInitialized('roarRatedIndicator') && null !== $object->getRoarRatedIndicator()) {
                 $data['RoarRatedIndicator'] = $object->getRoarRatedIndicator();
+            }
+            if ($object->isInitialized('gccn') && null !== $object->getGccn()) {
+                $data['GCCN'] = $object->getGccn();
             }
             foreach ($object as $key => $value_4) {
                 if (preg_match('/.*/', (string) $key)) {
@@ -494,6 +504,13 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             elseif (\array_key_exists('RoarRatedIndicator', $data) && $data['RoarRatedIndicator'] === null) {
                 $object->setRoarRatedIndicator(null);
             }
+            if (\array_key_exists('GCCN', $data) && $data['GCCN'] !== null) {
+                $object->setGccn($data['GCCN']);
+                unset($data['GCCN']);
+            }
+            elseif (\array_key_exists('GCCN', $data) && $data['GCCN'] === null) {
+                $object->setGccn(null);
+            }
             foreach ($data as $key => $value_4) {
                 if (preg_match('/.*/', (string) $key)) {
                     $object[$key] = $value_4;
@@ -586,6 +603,9 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
             }
             if ($object->isInitialized('roarRatedIndicator') && null !== $object->getRoarRatedIndicator()) {
                 $data['RoarRatedIndicator'] = $object->getRoarRatedIndicator();
+            }
+            if ($object->isInitialized('gccn') && null !== $object->getGccn()) {
+                $data['GCCN'] = $object->getGccn();
             }
             foreach ($object as $key => $value_4) {
                 if (preg_match('/.*/', (string) $key)) {
