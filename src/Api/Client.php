@@ -40,6 +40,28 @@ class Client extends \ShipStream\Ups\Api\Runtime\Client\Client
         return $this->executeEndpoint(new \ShipStream\Ups\Api\Endpoint\AddressValidation($requestoption, $version, $requestBody, $queryParameters), $fetch);
     }
     /**
+     * Finalizes the shipment process by marking a package or set of packages as ready for dispatch, effectively ending the consolidation stage.
+     *
+     * @param string $shipmentGccn The unique identifier of the shipment to close Out. It also known as GCCN.
+     * @param string $version Indicates WorldEase Shipment Management API to display the new release features
+     * @param array $headerParameters {
+     *     @var string $transId Client generated id which is treated as the Transaction ID
+     *     @var string $transactionSrc An identifier of the client/source application that is making the request.Length 512
+     * }
+     * @param string $shipperAccountNumber This is the unique account number associated with the Shipper. It is also known as UPS Shipper Account Number
+     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     * @throws \ShipStream\Ups\Api\Exception\WorldEaseShipmentManagementCloseOutShipmentBadRequestException
+     * @throws \ShipStream\Ups\Api\Exception\WorldEaseShipmentManagementCloseOutShipmentUnauthorizedException
+     * @throws \ShipStream\Ups\Api\Exception\WorldEaseShipmentManagementCloseOutShipmentNotFoundException
+     * @throws \ShipStream\Ups\Api\Exception\UnexpectedStatusCodeException
+     *
+     * @return \ShipStream\Ups\Api\Model\WorldEaseShipmentManagementCloseOutShipmentResponse|\Psr\Http\Message\ResponseInterface
+     */
+    public function closeOutShipment(string $shipmentGccn, string $version, \ShipStream\Ups\Api\Model\WorldEaseShipmentManagementCloseOutShipmentRequest $requestBody, array $headerParameters = [], string $fetch = self::FETCH_OBJECT)
+    {
+        return $this->executeEndpoint(new \ShipStream\Ups\Api\Endpoint\WorldEaseShipmentManagementCloseOutShipment($shipmentGccn, $version, $requestBody, $headerParameters), $fetch);
+    }
+    /**
     * The Address Validation Street Level API can be used to check addresses against the United States Postal Service database of valid addresses in the U.S. and Puerto Rico.
     *
     * @param int $requestoption Identifies the optional processing to be performed. If not present or invalid value then an error will be sent back.
