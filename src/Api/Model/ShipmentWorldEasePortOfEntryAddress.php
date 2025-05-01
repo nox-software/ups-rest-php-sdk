@@ -17,7 +17,7 @@ class ShipmentWorldEasePortOfEntryAddress extends \ArrayObject
      *
      * @var string
      */
-    protected $addressLine1;
+    protected $addressLine;
     /**
      * Address Line 2
      *
@@ -53,21 +53,21 @@ class ShipmentWorldEasePortOfEntryAddress extends \ArrayObject
      *
      * @return string
      */
-    public function getAddressLine1(): string
+    public function getAddressLine(): string
     {
-        return $this->addressLine1;
+        return $this->addressLine;
     }
     /**
      * Address Line 1
      *
-     * @param string $addressLine1
+     * @param string $addressLine
      *
      * @return self
      */
-    public function setAddressLine1(string $addressLine1): self
+    public function setAddressLine(string $addressLine): self
     {
-        $this->initialized['addressLine1'] = true;
-        $this->addressLine1 = $addressLine1;
+        $this->initialized['addressLine'] = true;
+        $this->addressLine = $addressLine;
         return $this;
     }
     /**

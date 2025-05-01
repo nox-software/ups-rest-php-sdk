@@ -46,9 +46,9 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 return $object;
             }
 
-            if (\array_key_exists('AddressLine1', $data)) {
-                $object->setAddressLine1($data['AddressLine1']);
-                unset($data['AddressLine1']);
+            if (\array_key_exists('AddressLine', $data)) {
+                $object->setAddressLine($data['AddressLine']);
+                unset($data['AddressLine']);
             }
             if (\array_key_exists('AddressLine2', $data)) {
                 $object->setAddressLine2($data['AddressLine2']);
@@ -84,8 +84,8 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         {
             $data = [];
 
-            if ($object->isInitialized('addressLine1') && null !== $object->getAddressLine1()) {
-                $data['AddressLine1'] = $object->getAddressLine1();
+            if ($object->isInitialized('addressLine') && null !== $object->getAddressLine()) {
+                $data['AddressLine'] = $object->getAddressLine();
             }
             if ($object->isInitialized('addressLine2') && null !== $object->getAddressLine2()) {
                 $data['AddressLine2'] = $object->getAddressLine2();
@@ -149,9 +149,9 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
                 return $object;
             }
 
-            if (\array_key_exists('AddressLine1', $data)) {
-                $object->setAddressLine1($data['AddressLine1']);
-                unset($data['AddressLine1']);
+            if (\array_key_exists('AddressLine', $data)) {
+                $object->setAddressLine($data['AddressLine']);
+                unset($data['AddressLine']);
             }
             if (\array_key_exists('AddressLine2', $data)) {
                 $object->setAddressLine2($data['AddressLine2']);
@@ -187,8 +187,8 @@ if (!class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJOR
         {
             $data = [];
 
-            if ($object->isInitialized('addressLine1') && null !== $object->getAddressLine1()) {
-                $data['AddressLine1'] = $object->getAddressLine1();
+            if ($object->isInitialized('addressLine') && null !== $object->getAddressLine()) {
+                $data['AddressLine'] = $object->getAddressLine();
             }
             if ($object->isInitialized('addressLine2') && null !== $object->getAddressLine2()) {
                 $data['AddressLine2'] = $object->getAddressLine2();
